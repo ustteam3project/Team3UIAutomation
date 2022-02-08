@@ -58,7 +58,7 @@ public class LanuchBrowser {
 
 	}
     
-	//@Test
+	@Test
 	public void VerifyLoginTest() throws InterruptedException {
 
 		test = extent.createTest("LoginTest", "Login with Register Email Address");
@@ -85,7 +85,7 @@ public class LanuchBrowser {
 
 	}
 	
-	//@DataProvider()
+	@DataProvider()
 	public String[][] getData(){
 		
 		
@@ -95,7 +95,7 @@ public class LanuchBrowser {
 		
 	}
 	
-	//@Test(dataProvider="getData")
+	@Test(dataProvider="getData")
 	public void VerifyLoginData(String data[]) throws InterruptedException {
 		test = extent.createTest("Data Driven LoginTest", "Login with Data Driven");
 		CommonUtilities.sleep(2);

@@ -11,7 +11,9 @@ Properties objpro;
 	
 	public ObjectReader() throws IOException
 	{
-		File fi = new File("E:\\ProjectUIAutomation\\YourLogo\\src\\test\\resources\\ObjectRepository\\ObjectConfig.properties");
+		String path=System.getProperty("user.dir");
+		//File fi = new File("E:\\ProjectUIAutomation\\YourLogo\\src\\test\\resources\\ObjectRepository\\ObjectConfig.properties");
+		File fi = new File(path+"\\ObjectRepository\\ObjectConfig.properties");
 	    FileInputStream fis = new FileInputStream(fi);	    
 	    objpro = new Properties();	    
 	    objpro.load(fis);	

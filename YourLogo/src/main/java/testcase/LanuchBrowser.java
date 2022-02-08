@@ -74,7 +74,7 @@ public class LanuchBrowser {
 
 	}
 
-	@Test()
+	@Test(retryAnalyzer= listeners.RetryAnalyzer.class)
 	public void VerifyRetryFailedTc() throws InterruptedException {
 
 		test = extent.createTest("RetryFailedTc", "VerifyRetryAnalyzer");
@@ -109,6 +109,7 @@ public class LanuchBrowser {
 		test.log(Status.INFO, "Loged In Successfully");
 
 	}
+	
 
 	@AfterMethod
 	public void teardown(ITestResult result) throws IOException {

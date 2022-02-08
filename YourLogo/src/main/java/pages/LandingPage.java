@@ -29,9 +29,7 @@ public class LandingPage {
 	{
 		String exTitle = "My Store";
 		String acTitle = driver.getTitle();
-		Assert.assertEquals(acTitle,exTitle);
-		
-		
+		Assert.assertEquals(acTitle,exTitle);	
 		
 	}
 

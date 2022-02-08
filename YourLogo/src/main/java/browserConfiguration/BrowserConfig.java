@@ -19,10 +19,11 @@ public class BrowserConfig {
 	public WebDriver getChromeBrowser()
 	{		
 		String key = obj.getChromeKey();
-		String path= obj.getDriverAbsPath();
+		String path1= obj.getDriverRelPath();
+		String path=System.getProperty("user.dir");
 		String url = obj.getURL();
 		
-		System.setProperty(key, path);
+		System.setProperty(key, path+path1);
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

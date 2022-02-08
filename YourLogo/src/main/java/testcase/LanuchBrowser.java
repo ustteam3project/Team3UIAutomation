@@ -110,6 +110,22 @@ public class LanuchBrowser {
 
 	}
 	
+	@Test
+	public void VerifyAddProductIntoCart() throws InterruptedException {
+
+		test = extent.createTest("LoginTest", "Login with Register Email Address");
+		CommonUtilities.sleep(2);
+		lp.verifyTitle();
+		test.log(Status.INFO, "Title Verified Successfully");
+		CommonUtilities.sleep(2);
+		lp.clickSignIn();
+		test.log(Status.INFO, "Navigated into Login Page");
+		login = new LoginPage(driver);
+		login.Login1();
+		test.log(Status.INFO, "Loged In Successfully");
+
+	}
+	
 
 	@AfterMethod
 	public void teardown(ITestResult result) throws IOException {
